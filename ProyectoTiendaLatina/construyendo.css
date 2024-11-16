@@ -5,7 +5,14 @@
     font-style: normal;
 }
 
+/*Primero asignamos el nombre que usaremos [ALIAS] y luego la ruta*/
+@font-face {
+    font-family: 'China';
+    src: url('fonts/Monstard-Bold.woff');
+}
+
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,37 +20,65 @@ body {
     font-family: 'Cream Beige', sans-serif;
     background-color: #f3f4f6;
     color: #333;
-    text-align: center;
+    text-align: center;background: rgb(87,8,8);
+    background: linear-gradient(90deg, rgba(87,8,8,1) 0%, rgba(255,16,16,0.9024859943977591) 46%, rgba(186,72,72,1) 98%);
 }
 
 
 
 
 
-.loading{
+.loading {
     font-size: 1.5rem;
 }
 
-.dots::after{
+.dots::after {
     content: '';
-    animation: dots 1.5s steps(5,end) infinite;
+    animation: dots 1.5s steps(5, end) infinite;
 }
 
 @keyframes dots {
-    0%, 20% {content: '';}
-    40% {content: '.';}
-    60% {content: '..';}
-    80%,100% {content: '...';}
+
+    0%,
+    20% {
+        content: '';
+    }
+
+    40% {
+        content: '.';
+    }
+
+    60% {
+        content: '..';
+    }
+
+    80%,
+    100% {
+        content: '...';
+    }
 }
 
 
+.tit {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    font-family: 'china';
+    font-size: 100px;
+
+}
+
 h1 {
+    font-family: Cream Beige;
     font-size: 2.5rem;
     margin-bottom: 10px;
     transition: transform 0.5s ease;
-    transform: translateY(20px); /* Empieza más abajo */
+    transform: translateY(20px);
+    /* Empieza más abajo */
 }
 
 h1.animate {
-    transform: translateY(0); /* Vuelve a su posición inicial */
+    transform: translateY(0);
+    /* Vuelve a su posición inicial */
 }
